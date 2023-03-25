@@ -1,5 +1,7 @@
+import React from "react";
+
 export type Props = {
-  children: any;
+  children: React.ReactNode;
   title: string;
   isChecked: boolean;
   itemId: number;

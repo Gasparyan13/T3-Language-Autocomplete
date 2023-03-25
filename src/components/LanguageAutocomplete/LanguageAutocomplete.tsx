@@ -19,7 +19,7 @@ import { ItalyFlagIcon } from "../../common/IconComponents/ItalyFlagIcon";
 import { PolandFlagIcon } from "../../common/IconComponents/PolandFlagIcon";
 import { FieldLanguageProvider } from "./containers/FieldLanguageCtx";
 
-export const LanguageAutocomplete: React.FC<Props> = ({ onChange, label }) => {
+export const LanguageAutocomplete: React.FC<Props> = ({ label }) => {
   const [isOptions, setHisOption] = useState<boolean>(false);
   const [languages, setLanguages] = useState([
     { id: 1, flag: <RusFlagIcon />, title: "Русский", checked: false },
@@ -54,7 +54,7 @@ export const LanguageAutocomplete: React.FC<Props> = ({ onChange, label }) => {
     <FieldLanguageProvider value={{ languages, setLanguages }}>
       <Root>
         <Label>{label}</Label>
-        <LanguagesBox onChange={onChange}>
+        <LanguagesBox>
           {getCheckedLanguages.map((lang, index) => {
             return (
               <Language key={lang.id}>

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const IconArrow = styled.div`
+/// any - потому что не настроил styled-components,
+export const IconArrow: any = styled.div`
   height: 16px;
   cursor: pointer;
   position: absolute;
   right: 12px;
-  top: 12px;
+  top: 35%;
   transform: ${(props: any) => props.isOpen && "rotate(180deg)"};
 `;
 
